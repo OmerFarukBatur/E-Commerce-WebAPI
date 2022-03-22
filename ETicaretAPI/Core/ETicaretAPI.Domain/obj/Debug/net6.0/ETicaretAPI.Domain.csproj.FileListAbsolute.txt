@@ -1,0 +1,12 @@
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\bin\Debug\net6.0\ETicaretAPI.Domain.deps.json
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\bin\Debug\net6.0\ETicaretAPI.Domain.dll
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\bin\Debug\net6.0\ETicaretAPI.Domain.pdb
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\ETicaretAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\ETicaretAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\ETicaretAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\ETicaretAPI.Domain.AssemblyInfo.cs
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\ETicaretAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\ETicaretAPI.Domain.dll
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\refint\ETicaretAPI.Domain.dll
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\ETicaretAPI.Domain.pdb
+C:\Users\OmerF\Desktop\ETicaretUygulaması\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net6.0\ref\ETicaretAPI.Domain.dll
