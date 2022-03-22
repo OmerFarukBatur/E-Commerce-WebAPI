@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YIHcw5dQ9IZ7TCS3wLzZhr7dRvp/62oaK0mkQRnEmdONov243OB4kFZlZY30gvU3qvAsyrBQFAdaVGr55aqzfw==",
+  "dgSpecHash": "+IluTkiDNnV5CxkUcxRB6KzKjVWGzr3bWzhFutnHxqelwByvW5I+CtgId51E4jzTnXWBJAbmJGrJ6ChtpcgMeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\OmerF\\Desktop\\ETicaretUygulaması\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\OmerF\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "C:\\Users\\OmerF\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.3\\microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xZV1L30rV1DUAdotIwGkD0r2xrJbo+13EjWa5Bkz6qb9vX63jM1jGDJlU8CUVQAxbaNe9eoIDY1jB9lb+6eT4g==",
+  "dgSpecHash": "r1NXD/iNTObGLUU6NBeBCjvWFEBamZ5IkJfcecCiVAT9chpvo0+hTxi9kzDiVfEwTU/3kDY4p0FhUJrpNnWL0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\OmerF\\Desktop\\ETicaretUygulaması\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+  "projectFilePath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\OmerF\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\OmerF\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
