@@ -82,3 +82,8 @@ C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETic
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\obj\Debug\net6.0\ETicaretAPI.API.pdb
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\obj\Debug\net6.0\ETicaretAPI.API.genruntimeconfig.cache
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\obj\Debug\net6.0\ref\ETicaretAPI.API.dll
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.Infrastructure.dll
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.Infrastructure.pdb
