@@ -87,3 +87,4 @@ C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETic
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.Infrastructure.dll
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.Infrastructure.pdb
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.API.staticwebassets.runtime.json

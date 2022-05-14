@@ -31,6 +31,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors(); // Cors politikasýna ait middleware
 
+app.UseStaticFiles(); // wwwroot klasörünü kullanmak için eklenen middleware
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

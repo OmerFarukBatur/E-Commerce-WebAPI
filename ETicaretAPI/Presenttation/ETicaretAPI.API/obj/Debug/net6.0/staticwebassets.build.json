@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "K8M4uZo9UoL6PiBpMUZfd6FD4YDLN0dDDlTYfg9nLw8=",
+  "Hash": "wT2xwpv0mdkBnRLm2mQnKTNVj62TBjvnlUXcqVdi1kw=",
   "Source": "ETicaretAPI.API",
   "BasePath": "_content/ETicaretAPI.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ETicaretAPI.API\\wwwroot",
+      "Source": "ETicaretAPI.API",
+      "ContentRoot": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
