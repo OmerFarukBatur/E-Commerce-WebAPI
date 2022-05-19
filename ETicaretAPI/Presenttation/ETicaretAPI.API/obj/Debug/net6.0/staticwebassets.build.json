@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wT2xwpv0mdkBnRLm2mQnKTNVj62TBjvnlUXcqVdi1kw=",
+  "Hash": "+Y3+rxeJpTAHbk21ccdbMEqHeKTd9GX4Ov601kycaBc=",
   "Source": "ETicaretAPI.API",
   "BasePath": "_content/ETicaretAPI.API",
   "Mode": "Default",
@@ -15,5 +15,74 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Adsiz.png",
+      "SourceId": "ETicaretAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "RelativePath": "resource/product-images/Adsiz.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\product-images\\Adsiz.png"
+    },
+    {
+      "Identity": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Adsiz-2.png",
+      "SourceId": "ETicaretAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "RelativePath": "resource/product-images/Adsiz-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\product-images\\Adsiz-2.png"
+    },
+    {
+      "Identity": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Scan0001.jpg",
+      "SourceId": "ETicaretAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "RelativePath": "resource/product-images/Scan0001.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\product-images\\Scan0001.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Scan0001-2.jpg",
+      "SourceId": "ETicaretAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "RelativePath": "resource/product-images/Scan0001-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\product-images\\Scan0001-2.jpg"
+    }
+  ]
 }
