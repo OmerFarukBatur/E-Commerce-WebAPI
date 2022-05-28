@@ -1,6 +1,8 @@
 using ETicaretAPI.Application.Validators.Products;
 using ETicaretAPI.Infrastructure;
 using ETicaretAPI.Infrastructure.Filter;
+using ETicaretAPI.Infrastructure.Services.Storage.Azure;
+using ETicaretAPI.Infrastructure.Services.Storage.Local;
 using ETicaretAPI.Persistence;
 using FluentValidation.AspNetCore;
 
@@ -21,6 +23,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
+
+builder.Services.AddStorage<LocalStorage>();
+//builder.Services.AddStorage<AzureStorage>();
+//builder.Services.AddStorage<ETicaretAPI.Infrastructure.Enums.StorageType.Local>();
 
 var app = builder.Build();
 
