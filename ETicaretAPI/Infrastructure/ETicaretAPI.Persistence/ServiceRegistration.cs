@@ -22,7 +22,7 @@ namespace ETicaretAPI.Persistence
             services.AddScoped<IOrderReadRepository,OrderReadRepository>();
             services.AddScoped<IOrderWriteRepository,OrderWriteRepository>();
 
-            services.AddScoped<IProducReadRepository, ProductReadRepository>();
+            services.AddScoped<IProductReadRepository, ProductReadRepository>();
             services.AddScoped<IProductWriteRepository,ProductWriteRepository>();
 
             services.AddScoped<IFileReadRepository, FileReadRepository>();
