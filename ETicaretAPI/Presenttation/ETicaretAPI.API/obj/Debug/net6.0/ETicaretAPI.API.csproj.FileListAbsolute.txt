@@ -151,3 +151,6 @@ C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttatio
 C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.dll
 C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.Contracts.dll
 C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.dll
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
