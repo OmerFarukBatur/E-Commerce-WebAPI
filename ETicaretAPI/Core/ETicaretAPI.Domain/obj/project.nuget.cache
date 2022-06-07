@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UpQNo9daGZBifBuHVhN4zSDxLucXvPgBAKOSQyDjSg3RaqqozZTTJIho5a9AMB/n1rOotmq1Z2O3PS0W11DCWg==",
+  "dgSpecHash": "Pi3BG8OPPeZz4tOnvcE+IGvGUrUmiW8G3m7gKsxoF+0ksPIPjjfHEeSjQMdcYCt6ATe4MAgJPB9gFfA+pBczHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
