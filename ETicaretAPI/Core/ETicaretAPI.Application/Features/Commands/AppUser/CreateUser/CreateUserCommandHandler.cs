@@ -38,6 +38,7 @@ namespace ETicaretAPI.Application.Features.Commands.AppUser.CreateUser
             }
             else
             {
+                response.Succeeded = false;
                 foreach (var error in result.Errors)
                 {
                     response.Message += $"{error.Code} - {error.Description}\n";
