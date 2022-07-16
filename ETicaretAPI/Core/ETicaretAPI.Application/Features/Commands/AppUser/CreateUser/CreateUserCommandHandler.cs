@@ -7,47 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ETicaretAPI.Application.Exceptions;
+using ETicaretAPI.Application.Abstractions.Services;
+using ETicaretAPI.Application.DTOs.User;
 
 namespace ETicaretAPI.Application.Features.Commands.AppUser.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest, CreateUserCommandResponse>
     {
-        readonly UserManager<U.AppUser> _userManager;
+        readonly IUserService _userService;
 
-        public CreateUserCommandHandler(UserManager<U.AppUser> userManager)
+        public CreateUserCommandHandler(IUserService userService)
         {
-            this._userManager = userManager;
+            _userService = userService;
         }
 
         public async Task<CreateUserCommandResponse> Handle(CreateUserCommandRequest request, CancellationToken cancellationToken)
         {
-            IdentityResult result = await _userManager.CreateAsync(new()
+            CreateUserResponse response = await _userService.CreateAsync(new()
             {
-                Id = Guid.NewGuid().ToString(),
-                UserName = request.UserName,
                 Email = request.Email,
-                NameSurname = request.NameSurname
-            }, request.Password);
+                NameSurname = request.NameSurname,
+                Password = request.Password,
+                PasswordConfirm = request.PasswordConfirm,
+                UserName = request.UserName
+            });
 
-
-            CreateUserCommandResponse response = new() { Succeeded = true };
-
-            if (result.Succeeded)
+            return new()
             {
-                response.Message = "Kullanıcı başarıyla oluşturulmuştur.";
-            }
-            else
-            {
-                response.Succeeded = false;
-                foreach (var error in result.Errors)
-                {
-                    response.Message += $"{error.Code} - {error.Description}\n";
-                }
-            }
-
-            return response;
-
-            //throw new UserCreateFailedException();
+                Message = response.Message,
+                Succeeded = response.Succeeded
+            };
         }
     }
 }

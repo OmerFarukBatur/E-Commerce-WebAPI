@@ -9,48 +9,27 @@ using System.Threading.Tasks;
 using ETicaretAPI.Application.Exceptions;
 using ETicaretAPI.Application.Abstractions.Token;
 using ETicaretAPI.Application.DTOs;
+using ETicaretAPI.Application.Abstractions.Services;
 
 namespace ETicaretAPI.Application.Features.Commands.AppUser.LoginUser
 {
     public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, LoginUserCommandResponse>
     {
-        readonly UserManager<U.AppUser> _userManager;
-        readonly SignInManager<U.AppUser> _signInManager;
-        readonly ITokenHandler _tokenHandler;
+        readonly IAuthService _authService;
 
-        public LoginUserCommandHandler(UserManager<U.AppUser> userManager, SignInManager<U.AppUser> signInManager, ITokenHandler tokenHandler)
+        public LoginUserCommandHandler(IAuthService authService)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _tokenHandler = tokenHandler;
+            _authService = authService;
         }
 
         public async Task<LoginUserCommandResponse> Handle(LoginUserCommandRequest request, CancellationToken cancellationToken)
         {
-            U.AppUser appUser = await _userManager.FindByNameAsync(request.UserNameOrEmail);
-            if (appUser == null)
-                appUser = await _userManager.FindByEmailAsync(request.UserNameOrEmail);
+            var token =  await _authService.LoginAsync(request.UserNameOrEmail, request.Password, 15);
 
-            if (appUser == null)
-                throw new NotFoundUserException();
-
-            SignInResult result = await _signInManager.CheckPasswordSignInAsync(appUser, request.Password, false);
-
-            if (result.Succeeded) // Authentication başarılı
+            return new LoginUserSuccessCommandResponse()
             {
-                //   Yetkileri belirlemeliyiz.
-                Token token = _tokenHandler.CreateAccessToken(5);
-                return new LoginUserSuccessCommandResponse()
-                {
-                    Token = token
-                };
-            }
-            //return new LoginUserErrorCommandResponse()
-            //{
-            //    Message = "Kullanıcı adı veya şifre hatalıdır."
-            //};
-
-            throw new AuthenticationErrorException();
+                Token = token
+            };
 
         }
     }
