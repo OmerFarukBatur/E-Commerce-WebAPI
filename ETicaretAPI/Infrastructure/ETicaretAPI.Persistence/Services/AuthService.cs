@@ -2,17 +2,13 @@
 using ETicaretAPI.Application.Abstractions.Token;
 using ETicaretAPI.Application.DTOs;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.Json;
 using ETicaretAPI.Application.DTOs.Facebook;
 using Microsoft.Extensions.Configuration;
 using Google.Apis.Auth;
 using ETicaretAPI.Domain.Entities.Identity;
 using ETicaretAPI.Application.Exceptions;
+using Microsoft.EntityFrameworkCore;
 
 namespace ETicaretAPI.Persistence.Services
 {
@@ -23,14 +19,16 @@ namespace ETicaretAPI.Persistence.Services
         readonly HttpClient _httpClient;
         readonly IConfiguration _configuration;
         readonly SignInManager<Domain.Entities.Identity.AppUser> _signInManager;
+        readonly IUserService _userService;
 
-        public AuthService(UserManager<Domain.Entities.Identity.AppUser> userManager, ITokenHandler tokenHandler, IHttpClientFactory httpClientFactory, IConfiguration configuration, SignInManager<Domain.Entities.Identity.AppUser> signInManager)
+        public AuthService(UserManager<Domain.Entities.Identity.AppUser> userManager, ITokenHandler tokenHandler, IHttpClientFactory httpClientFactory, IConfiguration configuration, SignInManager<Domain.Entities.Identity.AppUser> signInManager, IUserService userService)
         {
             _userManager = userManager;
             _tokenHandler = tokenHandler;
             _httpClient = httpClientFactory.CreateClient();
             _configuration = configuration;
             _signInManager = signInManager;
+            _userService = userService;
         }
 
 
@@ -60,6 +58,7 @@ namespace ETicaretAPI.Persistence.Services
                 await _userManager.AddLoginAsync(user, info);
 
                 Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 5);
                 return token;
             }
             throw new Exception("Invalid external authentication.");
@@ -113,22 +112,42 @@ namespace ETicaretAPI.Persistence.Services
 
         public async Task<Token> LoginAsync(string userNameOrEmail, string password, int accessTokenLifeTime)
         {
-            Domain.Entities.Identity.AppUser appUser = await _userManager.FindByNameAsync(userNameOrEmail);
-            if (appUser == null)
-                appUser = await _userManager.FindByEmailAsync(userNameOrEmail);
+            Domain.Entities.Identity.AppUser user = await _userManager.FindByNameAsync(userNameOrEmail);
+            if (user == null)
+                user = await _userManager.FindByEmailAsync(userNameOrEmail);
 
-            if (appUser == null)
+            if (user == null)
                 throw new NotFoundUserException();
 
-            SignInResult result = await _signInManager.CheckPasswordSignInAsync(appUser, password, false);
+            SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, password, false);
 
             if (result.Succeeded) // Authentication başarılı
             {
                 //   Yetkileri belirlemeliyiz.
                 Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 5);
                 return token;
             }
-            throw new AuthenticationErrorException();
+            else
+            {
+                throw new AuthenticationErrorException();
+            }
+            
+        }
+
+        public async Task<Token> RefreshTokenLoginAsync(string refreshToken)
+        {
+            AppUser? user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+            if (user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
+            {
+                Token token = _tokenHandler.CreateAccessToken(15);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 5);
+                return token;
+            }
+            else
+            {
+                throw new NotFoundUserException();
+            }
         }
     }
 }
