@@ -1,3 +1,5 @@
+using ETicaretAPI.API.Configuration.ColumnWriters;
+using ETicaretAPI.API.Extensions;
 using ETicaretAPI.Application;
 using ETicaretAPI.Application.Validators.Products;
 using ETicaretAPI.Infrastructure;
@@ -7,7 +9,13 @@ using ETicaretAPI.Infrastructure.Services.Storage.Local;
 using ETicaretAPI.Persistence;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Context;
+using Serilog.Core;
+using Serilog.Sinks.PostgreSQL;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +25,41 @@ builder.Services.AddCors(options =>options.AddDefaultPolicy( policy =>
 {
     policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200", "https://localhost:4200");
 }));
+
+// Seri log için yapýlan ayarlamalar
+Logger log = new LoggerConfiguration()
+    .WriteTo.Console() // loglarý console yaz
+    .WriteTo.File("log/log.txt") // loglarý belirtilen yoldaki dosya içerisine yaz
+    .WriteTo.PostgreSQL(builder.Configuration.GetConnectionString("PostgreSQL"), "Logs", needAutoCreateTable: true,
+        columnOptions: new Dictionary<string, ColumnWriterBase>
+        {
+            // Seri log kütüphanesinin vt de bilgileri kayýt edeceði tablo adlarý
+            {"message", new RenderedMessageColumnWriter()},
+            {"message_template", new MessageTemplateColumnWriter()},
+            {"level", new LevelColumnWriter()},
+            {"time_stamp", new TimestampColumnWriter()},
+            {"exception", new ExceptionColumnWriter()},
+            {"log_event", new LogEventSerializedColumnWriter()},
+            {"user_name", new UsernameColumnWriter()}
+        })
+    .WriteTo.Seq(builder.Configuration["Seq:ServerURL"]) // loglarý görselleþtirmek için Seq e yazma iþlemi yapýlmaktadýr.
+    .Enrich.FromLogContext() // context üzerinden verilen bilgierden yaralanmasý için eklenmiþtir.
+    .MinimumLevel.Information() // serilog kütüphanesinin o anki loglamýþ olduðu bilgilerin hangi seviyede olduðunu belirten ayar
+    .CreateLogger();
+
+builder.Host.UseSerilog(log);
+
+// Kullanýcýya ait tüm bilgileri almak için yapýlan gerekli ayarlar.
+builder.Services.AddHttpLogging(logging =>
+{
+    logging.LoggingFields = HttpLoggingFields.All;
+    logging.RequestHeaders.Add("sec-ch-ua");
+    logging.MediaTypeOptions.AddText("application/javascript");
+    logging.RequestBodyLogLimit = 4096;
+    logging.ResponseBodyLogLimit = 4096;
+
+});
+
 
 // Add services to the container.
 
@@ -50,6 +93,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidIssuer = builder.Configuration["Token:Issuer"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
             LifetimeValidator = ( notBefore, expires, securityToken, validationParameters) => expires != null ? expires > DateTime.UtcNow : false,
+            NameClaimType = ClaimTypes.Name // JWT üzerinde Name Claim ine karþýlýk gelen degeri User.Identity.Name propertysinden elde edebiliriz. Seri log ayarlarý için eklendi.
         };
     });
 
@@ -62,15 +106,30 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(); // Cors politikasýna ait middleware
-
 app.UseStaticFiles(); // wwwroot klasörünü kullanmak için eklenen middleware
+
+// Custom oluþturulan global exception middleware 
+app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
+
+app.UseSerilogRequestLogging(); // Seri log kütüphanesinin middleware dýr.Kendinden sonra gelen tüm iþlemlere ait oluþacak bilgileri loglar.
+
+app.UseHttpLogging(); // Kullanýcýya ait tüm bilgileri almamýza yarayan middleware dýr.
+
+app.UseCors(); // Cors politikasýna ait middleware
 
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+// context üzerinden o anki uygulamayý kullanan kullanýcýnýn adýný seri log ayarlarý içerisine eklediðimiz vt tablosuna eklememk için yazýlan UsernameColumnWriter class ýna iletmemizi saðlar.
+app.Use( async (context, next) =>
+{
+    var username = context.User?.Identity?.IsAuthenticated != null || true ? context.User.Identity.Name : null;
+    LogContext.PushProperty("user_name", username);
+    await next();
+});
 
 app.MapControllers();
 
