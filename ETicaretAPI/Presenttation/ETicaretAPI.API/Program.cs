@@ -11,6 +11,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.IdentityModel.Tokens;
+using NpgsqlTypes;
 using Serilog;
 using Serilog.Context;
 using Serilog.Core;
@@ -34,12 +35,12 @@ Logger log = new LoggerConfiguration()
         columnOptions: new Dictionary<string, ColumnWriterBase>
         {
             // Seri log kütüphanesinin vt de bilgileri kayýt edeceði tablo adlarý
-            {"message", new RenderedMessageColumnWriter()},
-            {"message_template", new MessageTemplateColumnWriter()},
-            {"level", new LevelColumnWriter()},
-            {"time_stamp", new TimestampColumnWriter()},
-            {"exception", new ExceptionColumnWriter()},
-            {"log_event", new LogEventSerializedColumnWriter()},
+            {"message", new RenderedMessageColumnWriter(NpgsqlDbType.Text)},
+            {"message_template", new MessageTemplateColumnWriter(NpgsqlDbType.Text)},
+            {"level", new LevelColumnWriter(true,NpgsqlDbType.Varchar)},
+            {"time_stamp", new TimestampColumnWriter(NpgsqlDbType.Timestamp)},
+            {"exception", new ExceptionColumnWriter(NpgsqlDbType.Text)},
+            {"log_event", new LogEventSerializedColumnWriter(NpgsqlDbType.Json)},
             {"user_name", new UsernameColumnWriter()}
         })
     .WriteTo.Seq(builder.Configuration["Seq:ServerURL"]) // loglarý görselleþtirmek için Seq e yazma iþlemi yapýlmaktadýr.
