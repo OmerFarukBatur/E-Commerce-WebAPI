@@ -216,3 +216,5 @@ C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETic
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\Serilog.Sinks.PostgreSQL.dll
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\Serilog.Sinks.Seq.dll
+C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.dll
+C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.pdb
