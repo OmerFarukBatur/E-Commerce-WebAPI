@@ -25,7 +25,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Cors politikasýna ait ayarlarýn yapýlmasý
 builder.Services.AddCors(options =>options.AddDefaultPolicy( policy =>
 {
-    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200", "https://localhost:4200");
+    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200", "https://localhost:4200").AllowCredentials();
 }));
 
 // Seri log için yapýlan ayarlamalar

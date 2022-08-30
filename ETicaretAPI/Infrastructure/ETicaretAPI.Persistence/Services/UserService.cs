@@ -57,7 +57,11 @@ namespace ETicaretAPI.Persistence.Services
                 user.RefreshTokenEndDate = accessTokenDate.AddSeconds(addOnAccessTokenDate);
                 await _userManager.UpdateAsync(user);
             }
-            throw new NotFoundUserException();
+            else
+            {
+                throw new NotFoundUserException();
+            }
+            
         }
     }
 }

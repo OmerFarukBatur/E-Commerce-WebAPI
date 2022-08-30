@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj": {}
+    "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
+    "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj",
         "projectName": "ETicaretAPI.Application",
-        "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj",
-        "packagesPath": "C:\\Users\\Ömer Faruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\obj\\",
+        "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\OmerF\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ömer Faruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OmerF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj"
+              "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj"
               }
             }
           }
@@ -82,7 +79,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -91,24 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {
+    "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
         "projectName": "ETicaretAPI.Domain",
-        "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
-        "packagesPath": "C:\\Users\\Ömer Faruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\obj\\",
+        "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\OmerF\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ömer Faruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OmerF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -149,7 +144,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -158,24 +154,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj": {
+    "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
         "projectName": "ETicaretAPI.Infrastructure",
-        "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Ömer Faruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\OmerF\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ömer Faruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OmerF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -189,8 +182,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
+              "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
               }
             }
           }
@@ -220,7 +213,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -229,24 +223,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj": {
+    "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj",
         "projectName": "ETicaretAPI.Persistence",
-        "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Ömer Faruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj",
+        "packagesPath": "C:\\Users\\OmerF\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ömer Faruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OmerF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -260,8 +251,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
+              "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
               }
             }
           }
@@ -309,7 +300,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -318,24 +310,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj": {
+    "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj",
+        "projectUniqueName": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj",
         "projectName": "ETicaretAPI.SignalR",
-        "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj",
-        "packagesPath": "C:\\Users\\Ömer Faruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\obj\\",
+        "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj",
+        "packagesPath": "C:\\Users\\OmerF\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ömer Faruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OmerF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -349,8 +338,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
+              "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
               }
             }
           }
@@ -370,7 +359,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -382,24 +372,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj": {
+    "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+        "projectUniqueName": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
         "projectName": "ETicaretAPI.API",
-        "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
-        "packagesPath": "C:\\Users\\Ömer Faruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\obj\\",
+        "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+        "packagesPath": "C:\\Users\\OmerF\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ömer Faruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OmerF\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -413,17 +400,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
+              "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
               },
-              "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj"
+              "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj"
               },
-              "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj"
+              "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj": {
+                "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj"
               },
-              "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj": {
-                "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj"
+              "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj": {
+                "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj"
               }
             }
           }
@@ -481,7 +468,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -493,7 +481,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
