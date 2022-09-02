@@ -5550,19 +5550,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\OmerF\\.nuget\\packages\\": {}
+    "C:\\Users\\Ömer Faruk\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+      "projectUniqueName": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
       "projectName": "ETicaretAPI.API",
-      "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
-      "packagesPath": "C:\\Users\\OmerF\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\obj\\",
+      "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+      "packagesPath": "C:\\Users\\Ömer Faruk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\OmerF\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ömer Faruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5576,17 +5580,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
-              "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
+            "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj": {
+              "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj"
             },
-            "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj"
+            "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj"
             },
-            "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj": {
-              "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj"
+            "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj"
             },
-            "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj": {
-              "projectPath": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj"
+            "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj": {
+              "projectPath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.SignalR\\ETicaretAPI.SignalR.csproj"
             }
           }
         }

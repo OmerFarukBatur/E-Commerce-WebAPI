@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kbyaTd25jLbpsrJW8GjnEpIkussmz9jyfu2Z5BTD0+Y=",
+  "Hash": "od54TvJ7xqxmlcG5n2nkiz3xr7hgvyzV9/xmqN/3k5s=",
   "Source": "ETicaretAPI.API",
   "BasePath": "_content/ETicaretAPI.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ETicaretAPI.API\\wwwroot",
       "Source": "ETicaretAPI.API",
-      "ContentRoot": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\photo-images\\photo.png",
+      "Identity": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\photo-images\\photo.png",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/photo.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\photo.png"
     },
     {
-      "Identity": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\photo-images\\resim1.jpg",
+      "Identity": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\photo-images\\resim1.jpg",
       "SourceId": "ETicaretAPI.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\OmerF\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Presenttation\\ETicaretAPI.API\\wwwroot\\",
       "BasePath": "_content/ETicaretAPI.API",
       "RelativePath": "photo-images/resim1.jpg",
       "AssetKind": "All",
