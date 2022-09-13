@@ -59,6 +59,7 @@ namespace ETicaretAPI.Persistence.Services
                     targetBasket = _basket.FirstOrDefault(b => b.Order is null)?.Basket;
                 else
                 {
+                    targetBasket = new();
                     user.Baskets.Add(targetBasket);
                     
                 }
