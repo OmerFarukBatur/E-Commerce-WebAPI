@@ -40,9 +40,9 @@ namespace ETicaretAPI.Persistence.Services
             var userName = _httpContextAccessor?.HttpContext?.User?.Identity?.Name;
             if (!string.IsNullOrEmpty(userName))
             {
-              AppUser? user = await  _userManager.Users
-                    .Include(u => u.Baskets)
-                    .FirstOrDefaultAsync(u => u.UserName == userName);
+                AppUser? user = await _userManager.Users
+                      .Include(u => u.Baskets)
+                      .FirstOrDefaultAsync(u => u.UserName == userName);
 
                 var _basket = from basket in user.Baskets
                               join order in _orderReadRepository.Table
@@ -61,10 +61,10 @@ namespace ETicaretAPI.Persistence.Services
                 {
                     targetBasket = new();
                     user.Baskets.Add(targetBasket);
-                    
+
                 }
-               await _basketWriteRepository.SaveAsync();
-                return targetBasket;     
+                await _basketWriteRepository.SaveAsync();
+                return targetBasket;
             }
             throw new Exception("Beklenmeyen bir hatayla karşılaşıldı.");
         }
@@ -75,7 +75,7 @@ namespace ETicaretAPI.Persistence.Services
             if (basket != null)
             {
                 BasketItem _basketItem = await _basketItemReadRepository.GetSingleAsync(bi => bi.Id == basket.Id && bi.ProductId == Guid.Parse(basketItem.ProductId));
-                if (_basketItem != null )
+                if (_basketItem != null)
                 {
                     _basketItem.Quantity++;
                 }
@@ -121,7 +121,16 @@ namespace ETicaretAPI.Persistence.Services
             if (_basketItem != null)
             {
                 _basketItem.Quantity = basketItem.Quantity;
-                await _basketItemWriteRepository.SaveAsync();   
+                await _basketItemWriteRepository.SaveAsync();
+            }
+        }
+
+        public Basket? GetUserActiveBasket
+        {
+            get
+            {
+                Basket? basket = ContextUser().Result;
+                return basket;
             }
         }
     }
