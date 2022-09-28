@@ -49,14 +49,40 @@ namespace ETicaretAPI.Persistence.Services
 
             return new()
             {
+                TotalOrderCount = await query.CountAsync(),
                 Orders = await data.Select(o => new
                 {
+                    Id = o.Id,
                     OrderCode = o.OrderCode,
                     TotalPrice = o.Basket.BasketItems.Sum(bi => bi.Product.Price * bi.Quantity),
                     CreatedDate = o.CreatedDate,
                     UserName = o.Basket.User.UserName
-                }).ToListAsync(),
-                TotalOrderCount = await data.CountAsync()
+                }).ToListAsync()
+                
+            };
+        }
+
+        public async Task<SingleOrder> GetOrderBydIdAsync(string Id)
+        {
+            var data = await _orderReadRepository.Table
+                .Include(o => o.Basket)
+                .ThenInclude(b => b.BasketItems)
+                .ThenInclude(bi => bi.Product)
+                .FirstOrDefaultAsync(o => o.Id == Guid.Parse(Id));
+
+            return new()
+            {
+                Id = data.Id.ToString(),
+                Address = data.Address,
+                CreatedDate = data.CreatedDate,
+                Description = data.Description,
+                OrderCode = data.OrderCode,
+                BasketItems = data.Basket.BasketItems.Select(bi => new
+                {
+                    bi.Product.Name,
+                    bi.Product.Price,
+                    bi.Quantity
+                })
             };
         }
     }
