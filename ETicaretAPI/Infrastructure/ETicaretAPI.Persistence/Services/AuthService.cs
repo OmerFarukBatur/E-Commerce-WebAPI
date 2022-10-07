@@ -9,6 +9,8 @@ using Google.Apis.Auth;
 using ETicaretAPI.Domain.Entities.Identity;
 using ETicaretAPI.Application.Exceptions;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using Microsoft.AspNetCore.WebUtilities;
 
 namespace ETicaretAPI.Persistence.Services
 {
@@ -20,8 +22,9 @@ namespace ETicaretAPI.Persistence.Services
         readonly IConfiguration _configuration;
         readonly SignInManager<Domain.Entities.Identity.AppUser> _signInManager;
         readonly IUserService _userService;
+        readonly IMailService _mailService;
 
-        public AuthService(UserManager<Domain.Entities.Identity.AppUser> userManager, ITokenHandler tokenHandler, IHttpClientFactory httpClientFactory, IConfiguration configuration, SignInManager<Domain.Entities.Identity.AppUser> signInManager, IUserService userService)
+        public AuthService(UserManager<Domain.Entities.Identity.AppUser> userManager, ITokenHandler tokenHandler, IHttpClientFactory httpClientFactory, IConfiguration configuration, SignInManager<Domain.Entities.Identity.AppUser> signInManager, IUserService userService, IMailService mailService)
         {
             _userManager = userManager;
             _tokenHandler = tokenHandler;
@@ -29,6 +32,7 @@ namespace ETicaretAPI.Persistence.Services
             _configuration = configuration;
             _signInManager = signInManager;
             _userService = userService;
+            _mailService = mailService;
         }
 
 
@@ -147,6 +151,19 @@ namespace ETicaretAPI.Persistence.Services
             else
             {
                 throw new NotFoundUserException();
+            }
+        }
+
+        public async Task PasswordResetAsync(string email)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(email);
+            if (user != null)
+            {
+                string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+                byte[] byteToken = Encoding.UTF8.GetBytes(resetToken);
+                resetToken = WebEncoders.Base64UrlEncode(byteToken);
+
+                await _mailService.SendPasswordResetMailAsync(email, user.Id, resetToken);
             }
         }
     }
