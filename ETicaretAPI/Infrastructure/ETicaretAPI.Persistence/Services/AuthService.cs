@@ -11,6 +11,7 @@ using ETicaretAPI.Application.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 using Microsoft.AspNetCore.WebUtilities;
+using ETicaretAPI.Application.Helpers;
 
 namespace ETicaretAPI.Persistence.Services
 {
@@ -62,7 +63,7 @@ namespace ETicaretAPI.Persistence.Services
                 await _userManager.AddLoginAsync(user, info);
 
                 Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime, user);
-                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+                await _userService.UpdateRefreshTokenAsync(token.RefreshToken, user, token.Expiration, 15);
                 return token;
             }
             throw new Exception("Invalid external authentication.");
@@ -129,7 +130,7 @@ namespace ETicaretAPI.Persistence.Services
             {
                 //   Yetkileri belirlemeliyiz.
                 Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime, user);
-                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+                await _userService.UpdateRefreshTokenAsync(token.RefreshToken, user, token.Expiration, 15);
                 return token;
             }
             else
@@ -145,7 +146,7 @@ namespace ETicaretAPI.Persistence.Services
             if (user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
             {
                 Token token = _tokenHandler.CreateAccessToken(30,user);
-                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 300);
+                await _userService.UpdateRefreshTokenAsync(token.RefreshToken, user, token.Expiration, 300);
                 return token;
             }
             else
@@ -160,11 +161,28 @@ namespace ETicaretAPI.Persistence.Services
             if (user != null)
             {
                 string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
-                byte[] byteToken = Encoding.UTF8.GetBytes(resetToken);
-                resetToken = WebEncoders.Base64UrlEncode(byteToken);
+                //byte[] byteToken = Encoding.UTF8.GetBytes(resetToken);
+                //resetToken = WebEncoders.Base64UrlEncode(byteToken);
+
+                resetToken = resetToken.UrlEncode();
 
                 await _mailService.SendPasswordResetMailAsync(email, user.Id, resetToken);
             }
+        }
+
+        public async Task<bool> VerifyResetTokenAsync(string userId, string resetToken)
+        {
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                //byte[] tokenBytes = WebEncoders.Base64UrlDecode(resetToken);
+                //resetToken = Encoding.UTF8.GetString(tokenBytes);
+
+                resetToken = resetToken.UrlDecode();
+
+                return await _userManager.VerifyUserTokenAsync(user,_userManager.Options.Tokens.PasswordResetTokenProvider,"ResetPassword",resetToken);
+            }
+            return false;
         }
     }
 }
