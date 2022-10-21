@@ -14,6 +14,7 @@ namespace ETicaretAPI.Application.DTOs.Order
         public string OrderCode { get; set; }
         public string Description { get; set; }
         public string Id { get; set; }
+        public bool Completed { get; set; }
 
     }
 }
