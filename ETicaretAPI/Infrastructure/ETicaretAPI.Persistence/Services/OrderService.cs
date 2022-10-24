@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CompletedOrder = ETicaretAPI.Application.DTOs.Order.CompletedOrderDTO;
 
 namespace ETicaretAPI.Persistence.Services
 {
@@ -123,17 +124,25 @@ namespace ETicaretAPI.Persistence.Services
             };
         }
 
-        public async Task CompletedOrderAsync(string id)
+        public async Task<(bool, CompletedOrderDTO)> CompleteOrderAsync(string id)
         {
-           Order order = await _orderReadRepository.GetByIdAsync(id);
+            Order? order = await _orderReadRepository.Table.Include(o => o.Basket).ThenInclude(b => b.User).FirstOrDefaultAsync(o => o.Id == Guid.Parse(id));
             if (order != null)
             {
                 await _completedOrderWriteRepository.AddAsync(new()
                 {
                     OrderId = Guid.Parse(id)
                 });
-                await _completedOrderWriteRepository.SaveAsync();
+
+                return (await _completedOrderWriteRepository.SaveAsync()>0, new()
+                {
+                    OrderCode = order.OrderCode,
+                    UserName = order.Basket.User.UserName,
+                    OrderDate = order.CreatedDate,
+                    To = order.Basket.User.Email
+                });
             }
+            return (false,null);
         }
     }
 }
