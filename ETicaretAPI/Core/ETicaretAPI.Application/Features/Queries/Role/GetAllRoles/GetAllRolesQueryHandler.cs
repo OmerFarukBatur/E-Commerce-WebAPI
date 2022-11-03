@@ -19,11 +19,12 @@ namespace ETicaretAPI.Application.Features.Queries.Role.GetAllRoles
 
         public async Task<GetAllRolesQueryResponse> Handle(GetAllRolesQueryRequest request, CancellationToken cancellationToken)
         {
-            IDictionary<string,string> results = await _roleService.GetAllRolesAsync();
+            var (datas,allCount) = await _roleService.GetAllRolesAsync(request.Page,request.Size);
 
             return new()
             {
-                Datas = results
+                Datas = datas,
+                TotalCount = allCount
             };
         }
     }

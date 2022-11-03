@@ -58,7 +58,7 @@ namespace ETicaretAPI.API.Controllers
             return Ok(response);
         }
 
-        [HttpPut("{name}")]
+        [HttpDelete("{Id}")]
         [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Role", Menu = AuthorizeDefinitionConstants.Roles)]
         public async Task<IActionResult> DeleteRole([FromRoute]RemoveRoleCommandRequest removeRoleCommandRequest)
         {

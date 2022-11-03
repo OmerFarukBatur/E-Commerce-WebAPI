@@ -21,25 +21,31 @@ namespace ETicaretAPI.Persistence.Services
 
         public async Task<bool> CreateRoleAsync(string name)
         {
-            IdentityResult result = await _roleManager.CreateAsync(new() { Name = name });
+            IdentityResult result = await _roleManager.CreateAsync(new() { Id = Guid.NewGuid().ToString(),Name = name });
             return result.Succeeded;
         }
 
-        public async Task<bool> DeleteRoleAsync(string name)
+        public async Task<bool> DeleteRoleAsync(string id)
         {
-            IdentityResult result = await _roleManager.DeleteAsync(new() { Name = name });
+            AppRole appRole = await _roleManager.FindByIdAsync(id);
+            IdentityResult result = await _roleManager.DeleteAsync(appRole);
             return result.Succeeded;
         }
         public async Task<bool> UpdateRoleAsync(string id, string name)
         {
-            IdentityResult result = await _roleManager.UpdateAsync(new() { Id = id ,Name = name });
+            AppRole appRole = await _roleManager.FindByIdAsync(id);
+            appRole.Name = name;
+            IdentityResult result = await _roleManager.UpdateAsync(appRole);
             return result.Succeeded;
         }
 
-        public async Task<IDictionary<string, string>> GetAllRolesAsync()
+        public async Task<(object,int)> GetAllRolesAsync(int page, int size)
         {
-            Dictionary<string ,string> roles = await _roleManager.Roles.ToDictionaryAsync(role => role.Id, role => role.Name);
-            return roles;
+            var query = _roleManager.Roles;
+            object roles = query.Skip(page * size).Take(size).Select(r => new { r.Id, r.Name });
+            int allCount = await query.CountAsync();
+
+            return (roles,allCount);
         }
 
         public async Task<(string id, string name)> GetRoleByIdAsync(string id)
