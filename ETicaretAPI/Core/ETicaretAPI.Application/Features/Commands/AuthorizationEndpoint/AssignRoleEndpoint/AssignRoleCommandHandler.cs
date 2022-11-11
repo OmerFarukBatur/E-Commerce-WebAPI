@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ETicaretAPI.Application.Abstractions.Services;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,18 @@ namespace ETicaretAPI.Application.Features.Commands.AuthorizationEndpoint.Assign
 {
     public class AssignRoleCommandHandler : IRequestHandler<AssignRoleCommandRequest, AssignRoleCommandResponse>
     {
-        public Task<AssignRoleCommandResponse> Handle(AssignRoleCommandRequest request, CancellationToken cancellationToken)
+        readonly IAuthorizationEndpointService _authorizationEndpointService;
+
+        public AssignRoleCommandHandler(IAuthorizationEndpointService authorizationEndpointService)
         {
-            throw new NotImplementedException();
+            _authorizationEndpointService = authorizationEndpointService;
+        }
+
+        public async Task<AssignRoleCommandResponse> Handle(AssignRoleCommandRequest request, CancellationToken cancellationToken)
+        {
+            await _authorizationEndpointService.AssignRoleEndpointAsync(request.Roles, request.Code, request.Menu,request.Type);
+
+            return new();
         }
     }
 }

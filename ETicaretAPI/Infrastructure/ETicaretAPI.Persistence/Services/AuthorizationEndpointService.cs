@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ETicaretAPI.Application.Repositories.Menu;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using ETicaretAPI.Domain.Entities.Identity;
 
 namespace ETicaretAPI.Persistence.Services
 {
@@ -19,52 +21,84 @@ namespace ETicaretAPI.Persistence.Services
         readonly IEndpointWriteRepository _endpointWriteRepository;
         readonly IMenuReadRepository _menuReadRepository;
         readonly IMenuWriteRepository _menuWriteRepository;
+        readonly RoleManager<AppRole> _roleManager;
 
         public AuthorizationEndpointService(
-            IApplicationService applicationService, 
-            IEndpointReadRepository endpointReadRepository, 
-            IEndpointWriteRepository endpointWriteRepository, 
-            IMenuReadRepository menuReadRepository, 
-            IMenuWriteRepository menuWriteRepository
-            )
+            IApplicationService applicationService,
+            IEndpointReadRepository endpointReadRepository,
+            IEndpointWriteRepository endpointWriteRepository,
+            IMenuReadRepository menuReadRepository,
+            IMenuWriteRepository menuWriteRepository,
+            RoleManager<AppRole> roleManager)
         {
             _applicationService = applicationService;
             _endpointReadRepository = endpointReadRepository;
             _endpointWriteRepository = endpointWriteRepository;
             _menuReadRepository = menuReadRepository;
             _menuWriteRepository = menuWriteRepository;
+            _roleManager = roleManager;
         }
 
         public async Task AssignRoleEndpointAsync(string[] roles, string code,string menu ,Type type)
         {
             Menu? _menu = await _menuReadRepository.GetSingleAsync(m => m.Name == menu);
-            if (menu == null)
+            if (_menu == null)
             {
-                await _menuWriteRepository.AddAsync(new()
+                _menu = new()
                 {
                     Id = Guid.NewGuid(),
                     Name = menu
-                });
+                };
+                await _menuWriteRepository.AddAsync(_menu);
 
                 await _menuWriteRepository.SaveAsync();
             }
-            Endpoint? endpoint = await _endpointReadRepository.Table.Include(m=> m.Menu).FirstOrDefaultAsync(e => e.Code == code && e.Menu.Name == menu);
+            Endpoint? endpoint = await _endpointReadRepository.Table.Include(m=> m.Menu).Include(r => r.Roles).FirstOrDefaultAsync(e => e.Code == code && e.Menu.Name == menu);
             if (endpoint == null)
             {
                 var action = _applicationService.GetAuthorizeDefinitionEndpoints(type).FirstOrDefault(m => m.Name == menu)?.Actions.FirstOrDefault(m => m.Code == code);
-                
-                await _endpointWriteRepository.AddAsync(new() {
+
+                endpoint = new()
+                {
                     Id = Guid.NewGuid(),
                     Code = action.Code,
                     ActionType = action.ActionType,
                     HttpType = action.HttpType,
-                    Definition = action.Definition
-                }); 
+                    Definition = action.Definition,
+                    Menu = _menu
+                };
+
+                await _endpointWriteRepository.AddAsync(endpoint); 
                 
                 await _endpointWriteRepository.SaveAsync();
             }
 
-           
+            foreach (var role in endpoint.Roles)
+            {
+                endpoint.Roles.Remove(role);
+            }
+
+            var appRoles = await _roleManager.Roles.Where(r => roles.Contains(r.Name)).ToListAsync();
+
+            foreach (var role in appRoles)
+            {
+                endpoint.Roles.Add(role);              
+            }
+            await _endpointWriteRepository.SaveAsync();
+        }
+
+        public async Task<List<string>> GetRolesToEndpointAsync(string code,string menu)
+        {
+            Endpoint? endpoint = await _endpointReadRepository.Table.Include(r => r.Roles).Include(m => m.Menu).FirstOrDefaultAsync(e => e.Code == code && e.Menu.Name == menu);
+
+            if (endpoint != null)
+            {
+                return endpoint.Roles.Select(r => r.Name).ToList();
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
