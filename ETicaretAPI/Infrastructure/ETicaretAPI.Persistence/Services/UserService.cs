@@ -4,6 +4,7 @@ using ETicaretAPI.Application.Exceptions;
 using ETicaretAPI.Application.Helpers;
 using ETicaretAPI.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace ETicaretAPI.Persistence.Services
     {
         readonly UserManager<AppUser> _userManager;
 
+        
         public UserService(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
@@ -82,5 +84,23 @@ namespace ETicaretAPI.Persistence.Services
                 }
             }
         }
+
+        public async Task<List<ListUser>> GetAllUsersAsync(int page, int size)
+        {
+            var users = await _userManager.Users
+                .Skip(page * size)
+                .Take(size)
+                .ToListAsync();
+            return users.Select(user => new ListUser
+            {
+                Id = user.Id,
+                NameSurname = user.NameSurname,
+                Email = user.Email,
+                TwoFactorEnabled =user.TwoFactorEnabled,
+                UserName = user.UserName
+            }).ToList();
+        }
+        public int TotalUsersCount => _userManager.Users.Count();
+
     }
 }

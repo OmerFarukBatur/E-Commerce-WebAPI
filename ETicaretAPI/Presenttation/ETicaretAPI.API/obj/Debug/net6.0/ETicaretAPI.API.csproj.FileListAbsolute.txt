@@ -220,3 +220,8 @@ C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttatio
 C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.pdb
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.dll
 C:\Users\OmerF\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\bin\Debug\net6.0\ETicaretAPI.SignalR.pdb
+C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\obj\Debug\net6.0\staticwebassets\msbuild.ETicaretAPI.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\obj\Debug\net6.0\staticwebassets\msbuild.build.ETicaretAPI.API.props
+C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ETicaretAPI.API.props
+C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ETicaretAPI.API.props
+C:\Users\Ömer Faruk\Documents\GitHub\E-Commerce-WebAPI\ETicaretAPI\Presenttation\ETicaretAPI.API\obj\Debug\net6.0\staticwebassets.pack.json
