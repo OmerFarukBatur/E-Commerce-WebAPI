@@ -100,7 +100,29 @@ namespace ETicaretAPI.Persistence.Services
                 UserName = user.UserName
             }).ToList();
         }
+
         public int TotalUsersCount => _userManager.Users.Count();
 
+        public async Task AssignRoleToUserAsync(string userId, string[] roles)
+        {
+            AppUser appUser = await _userManager.FindByIdAsync(userId);
+            if (appUser != null)
+            {
+                var userRoles = await _userManager.GetRolesAsync(appUser);
+                await _userManager.RemoveFromRolesAsync(appUser,userRoles);
+                await _userManager.AddToRolesAsync(appUser, roles);
+            }
+        }
+
+        public async Task<string[]> GetRolesToUserAsync(string userId)
+        {
+            AppUser appUser = await _userManager.FindByIdAsync(userId);
+            if (appUser != null)
+            {
+                var roles = await _userManager.GetRolesAsync(appUser);
+                return roles.ToArray();
+            }
+            return new string[] { };
+        }
     }
 }
