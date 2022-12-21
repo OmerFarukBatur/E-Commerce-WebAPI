@@ -654,6 +654,14 @@
           }
         }
       },
+      "QRCoder/1.4.3": {
+        "runtime": {
+          "lib/net6.0/QRCoder.dll": {
+            "assemblyVersion": "1.4.3.0",
+            "fileVersion": "1.4.3.0"
+          }
+        }
+      },
       "Serilog/2.11.0": {
         "runtime": {
           "lib/net5.0/Serilog.dll": {
@@ -1078,7 +1086,8 @@
         "dependencies": {
           "Azure.Storage.Blobs": "12.12.0",
           "ETicaretAPI.Application": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.5"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.5",
+          "QRCoder": "1.4.3"
         },
         "runtime": {
           "ETicaretAPI.Infrastructure.dll": {}
@@ -1644,6 +1653,13 @@
       "sha512": "sha512-fzgRmBd3nAFvKt/L70sJfFWAdobtwDEeOzOzruJq9og97O8/5B96inQOAgOpYyaUjPYpS4ZS5/bxm3vnOJ0+pQ==",
       "path": "npgsql.entityframeworkcore.postgresql/6.0.4",
       "hashPath": "npgsql.entityframeworkcore.postgresql.6.0.4.nupkg.sha512"
+    },
+    "QRCoder/1.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fWuFqjm8GTlEb2GqBl3Hi8HZZeZQwBSHxvRPtPjyNbT82H0ff0JwavKRBmMaXCno1Av6McPC8aJzri0Mj2w9Jw==",
+      "path": "qrcoder/1.4.3",
+      "hashPath": "qrcoder.1.4.3.nupkg.sha512"
     },
     "Serilog/2.11.0": {
       "type": "package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BUhtlvldubnavsMRwF8aNAOmeyC8+gbOV0TjRxvQ4gDb7Uoj9y9J5e8K8BPq4lTxWUWJATvIRH0fJkg9pmoX4A==",
+  "dgSpecHash": "7b0rLO5ICJUNUbnlkufdUHC71Fm3viEYP28RUvl6G6PqOJ7MUhwP/uwIRLapiga+auYfjGeyiN2rucoj5mZ5bg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ömer Faruk\\Documents\\GitHub\\E-Commerce-WebAPI\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ömer Faruk\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Ömer Faruk\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Ömer Faruk\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
