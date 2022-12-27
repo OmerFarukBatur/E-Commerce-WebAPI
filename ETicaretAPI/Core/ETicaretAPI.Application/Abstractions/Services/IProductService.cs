@@ -9,5 +9,6 @@ namespace ETicaretAPI.Application.Abstractions.Services
     public interface IProductService
     {
         Task<byte[]> QrCodeToProductsAsync(string productId);
+        Task StokUpdateToProductAsync(string productId, int stock);
     }
 }
